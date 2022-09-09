@@ -15,8 +15,8 @@ while (z <= 'x')
 putchar(z);
 z++;
 }
-z='A';
-while (z <='X')
+z = 'A';
+while (z <= 'X')
 {
 putchar(z);
 z++;
