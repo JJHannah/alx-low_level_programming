@@ -6,20 +6,14 @@
 
 int main(void)
 {
-char lower = 'a';
+int ch;
 
-char upper = 'A';
+for (ch = 'a'; ch <= 'z'; ch++)
+putchar(ch);
 
-while (lower <= 'z') /*print lowercases a-z*/
-{
-putchar(lower);
-lower++;
-}
-while (upper <= 'Z') /*print uppercase A-Z*/
-{
-putchar(upper);
-upper++;
-}
+for (ch = 'A'; ch <= 'Z'; ch++)
+putchar(ch);
+
 putchar('\n');
 
 return (0);
