@@ -12,27 +12,38 @@ int a, b, c, d;
 a = b = c = 48; d = 49;
 while  ((a < 58))
 {
-putchar(a); putchar(b); putchar(32); putchar(c); putchar(d);
+putchar(a);
+putchar(b);
+putchar(32);
+putchar(c);
+putchar(d);
 if ((a == 57) && (b == 56) && (c == 57) && (d == 57))
 {
-putchar('\n'); a++;
+putchar('\n');
+a++;
 }
 else
 {
-putchar(44); putchar(32);
+putchar(44);
+putchar(32);
 if ((c == 57) && (d == 57))
 {
 if (b < 56)
 {
-d = ++b + 1; c = a;
+d = ++b + 1;
+c = a;
 }
 else if (b == 56)
 {
-b++; c = a + 1; d = 48;
+b++;
+c = a + 1;
+d = 48;
 }
 else if (b == 57)
 {
-b = 48; d = 49; c = ++a;
+b = 48;
+d = 49; 
+c = ++a;
 }
 }
 else if (d < 57)
