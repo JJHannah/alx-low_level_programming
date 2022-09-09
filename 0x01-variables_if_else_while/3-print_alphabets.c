@@ -7,19 +7,19 @@
 
 int main(void)
 {
-char z;
+char x;
 
-z = 'a';
-while (z <= 'x')
+x = 'a';
+while (x <= 'z')
 {
-putchar(z);
-z++;
+putchar(x);
+x++;
 }
-z = 'A';
-while (z <= 'X')
+x = 'A';
+while (x <= 'Z')
 {
-putchar(z);
-z++;
+putchar(x);
+x++;
 }
 putchar('\n');
 return (0);
