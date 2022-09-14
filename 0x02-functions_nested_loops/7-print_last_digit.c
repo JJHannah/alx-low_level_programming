@@ -11,7 +11,7 @@ if (z < 0)
 z = - z;
 x = z % 10;
 
-if (a < 0)
+if (x < 0)
 x = -x;
 
 _putchar(x + '0');
