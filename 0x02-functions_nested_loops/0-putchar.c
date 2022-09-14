@@ -8,15 +8,15 @@
 int main(void)
 {
 char message[] = "_putchar";
-for (int count = 0; count <=8; count++)
+for (int i = 0; i <=8; i++)
 {
-if (message[count] == '\0')
+if (message[i] == '\0')
 {
 _putchar('\n');
 break;
 }
 else
-_putchar(message[count]);
+_putchar(message[i]);
 }
 return (0);
 }
