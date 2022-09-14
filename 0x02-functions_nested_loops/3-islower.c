@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- *_islower-will checks for the  lowercase character
- *Return: 1 if lowercase and 0 if uppercase 
+ *int_islower(int c) -will checks for the  lowercase character
+ *Return:1 if lowercase and 0 if uppercase 
  */
 int _islower(int c)
 {
-if(c >= 'a' && c <= 'z')
+if(c >= 'a' && c <= 'z' )
 {
 return (1);
 }
