@@ -7,7 +7,7 @@
 void print_to_98(int n)
 {
 
-int j,k;
+int j, k;
 
 if (n <= 98)
 {
