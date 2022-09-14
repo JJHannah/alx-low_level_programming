@@ -10,14 +10,7 @@ int main(void)
 char message[] ="_putchar";
 int i;
 for (int i = 0;i <=8; i++)
-{
-if (message[i] == '\0')
-{
+_putchar(str[i]);
 _putchar('\n');
-break;
-}
-else
-_putchar(message[i]);
-}
 return (0);
 }
