@@ -7,8 +7,9 @@
 
 int main(void)
 {
-char message[] = "_putchar";
-for (int i = 0; i <=8; i++)
+char message[] ="_putchar";
+int i;
+for (int i = 0;i <=8; i++)
 {
 if (message[i] == '\0')
 {
