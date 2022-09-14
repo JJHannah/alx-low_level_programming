@@ -7,9 +7,9 @@
 
 int main(void)
 {
-char c ="_putchar";
-for (c = 0;c <=8; c++)
-_putchar(str[c]);
+char ch ="_putchar";
+for (ch = 0;ch <=8; ch++)
+_putchar(ch);
 _putchar('\n');
 return (0);
 }
