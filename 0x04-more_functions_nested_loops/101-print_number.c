@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- *print_number - print an integer, without using long, arrays, or pointer *@n: number to be printed
+ *print_number - print an integer, without using long,
+ * arrays, or pointer *@n: number to be printed
  */
 
 void print_number(int n)
@@ -25,8 +26,11 @@ tens = t_beg / 10;
 
 while (tens >= 1)
 {
-digit = positive / tens;digit = positive / tens;
+digit = positive / tens;
+digit = positive / tens;
+
 _putchar(digit + '0');
+
 positive = (positive - (tens * digit));
 tens /= 10;
 }
