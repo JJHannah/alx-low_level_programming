@@ -31,7 +31,7 @@ digit = positive / tens;
 
 _putchar(digit + '0');
 
-positive = (positive - (tens * digit));
+positive = (tens * digit);
 tens /= 10;
 }
 }
