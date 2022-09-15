@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 
-/*
+/**
  *largest_number - prints the largest of 3 integers
  *@a: first integer
  *@b: second integer
