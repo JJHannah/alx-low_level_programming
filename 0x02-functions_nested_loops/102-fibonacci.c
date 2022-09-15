@@ -6,24 +6,19 @@
  */
 int main(void)
 {
-long int a, b, c, next;
+int counter;
+int countto = 50;
+long a = 1;
+long b = 2;
 
-b = 1;
-c = 2;
-
-for (a = 1; a <= 50; ++a)
+for (counter = 1; counter <= (countto / 2); counter++)
 {
-if (b != 20365011074)
+printf("%li %li ", a, b);
+a += b;
+b += a;
 }
-printf("%ld, ", b);
-}
-else
-{
-printf("%ld\n", b);
-}
-next = j + k;
-b = c;
-c = next;
-}
+if (countto % 2 == 1)
+printf("%li", a);
+printf("\n");
 return (0);
 }
