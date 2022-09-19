@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  *_puts - prints a string, followed by a new line, to stdout
@@ -13,7 +12,7 @@ int j;
 
 for (j = 0; str[j] != '\0'; j++)
 {
-puts(str[j]);
+_puts(str[j]);
 }
-puts('\n');
+_puts('\n');
 }
