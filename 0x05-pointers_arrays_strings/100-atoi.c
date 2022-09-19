@@ -9,6 +9,7 @@
 int _atoi(char *s)
 {
 int j = 1;
+
 unsigned int num = 0;
 
 do {
