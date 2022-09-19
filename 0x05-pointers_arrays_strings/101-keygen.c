@@ -20,7 +20,7 @@ srand(time(NULL));
 
 for (j = 0; j < 100; j++)
 {
-pass[i] = rand() % 78;
+pass[j] = rand() % 78;
 
 sum += (pass[j] + '0');
 putchar(pass[j] + '0');
