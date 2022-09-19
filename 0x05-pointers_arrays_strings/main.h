@@ -1,8 +1,10 @@
 #ifndef MAIN_H
 #define MAIN_H
+#include <stdio.h>
 
 /**
  *void prototypes()
+ *char prototypes()
  *int prototypes()
  */
 
@@ -17,5 +19,6 @@ void puts_half(char *str);
 void print_array(int *a, int n);
 char *_strcpy(char *dest, char *src);
 int _atoi(char *str);
+int _putchar(char c);
 
 #endif /* MAIN_H */
