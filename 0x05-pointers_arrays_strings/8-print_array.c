@@ -15,11 +15,10 @@ int j;
 for (j = 0; j < n; j++)
 {
 if (j == 0)
-{
+
 printf("%d", a[j]);
-}
+
 else
-{
 printf(", %d", a[j]);
 }
 printf("\n");
