@@ -13,7 +13,7 @@ int j;
 
 for (j = 0; str[j] != '\0'; j++)
 {
-_putchar(str[j]);
+puts(str[j]);
 }
-_putchar('\n');
+puts('\n');
 }
