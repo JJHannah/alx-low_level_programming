@@ -2,17 +2,34 @@
 #include <stdio.h>
 
 /**
- *cap_string - capitalize first letter of each word
- *@s: string to manipulate
- *
+ *cap_string - capitalizes everey word of a string
+ *@s: string to modify
  *Return: string
  */
 
 char *cap_string(char *s)
 {
-int j = 0;
+int x = 0;
+int y;
 
-if (s[j] >= 'a' && s[j] <= 'z')
+char a[] = " \t\n,;.!?\"(){}";
 
-
-
+while (*(s + x))
+{
+if (*(s + x) >= 'a' && *(s + x) <= 'z')
+{
+if (x == 0)
+*(s + x) -= 'a' - 'A';
+else
+{
+for (y = 0; y <= 12; y++)
+{
+if (a[y] == *(s + x - 1))
+*(s + x) -= 'a' - 'A';
+}
+}
+}
+x++;
+}
+return (s);
+}
