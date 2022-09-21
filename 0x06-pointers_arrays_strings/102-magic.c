@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include "main.h"
 int main(void)
 {
 int n;
@@ -8,15 +8,14 @@ int *p;
 
 a[2] = 1024;
 p = &n;
-/**
+/*
  *write your line of code here...
- *Note:
- *You are not allowed to use the variable a
- *You are not allowed to modify the variable p
- *You are not allowed to use 
- *only one statement
- *You are allowed to use the standard library
- *you are not allowed to code anything else than this line of code
+ *Remember
+ *-You are not allowed to use a
+ *-You are not allowed to modify p
+ *-only one statement
+ *-You are allowed to use the standard library
+ *- you are not allowed to code anything else than this line of code
  */
 *(p + 5) = 98;
 /* ...so that this prints 98\n */
