@@ -14,7 +14,6 @@ p = &n;
  *-You are not allowed to use a
  *-You are not allowed to modify p
  *-only one statement
- *-You are allowed to use the standard library
  *- you are not allowed to code anything else than this line of code
  */
 *(p + 5) = 98;
