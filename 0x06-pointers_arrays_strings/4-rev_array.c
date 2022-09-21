@@ -15,7 +15,7 @@ int j = 0, k;
 n = n - 1;
 while (j < n)
 {
-t = *(a + j);
+k = *(a + j);
 *(a + j) = *(a + n);
 *(a + n) = k;
 j++;
