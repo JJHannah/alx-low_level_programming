@@ -14,5 +14,5 @@ int j = 0;
 while (*(s1 + j) && *(s2 + j) && (*(s1 + j) == *(s2 + j)))
 j++;
 
-return (*(s1 + j) - *(s2 + j));
+return (*(s1 + j)-*(s2 + j));
 }
