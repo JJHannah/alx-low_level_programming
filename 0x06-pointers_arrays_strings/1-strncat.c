@@ -16,16 +16,16 @@ int x, y;
 x = 0;
 y = 0;
 
-while (dest[x] != '\0')
+while (*(dest + x))
 x++;
-
-while (src[y] != '\0' && y < n)
+while (y < n && *(src + y))
 {
-dest[x] = src[y];
+*(dest + x) = *(src + y);
 y++;
 x++;
 }
-dest[i] = '\0';
+if (y < n)
+*(dest + x) = *(src + y);
 
 return (dest);
 }
