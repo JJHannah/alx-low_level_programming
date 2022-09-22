@@ -17,35 +17,35 @@
 
 void print_buffer(char *b, int size)
 {
-int x = 0, y;
-if (size < 0)
-{
-printf('\n');
-return;
-}
-while (x < size)
-{
-if (x % 10 == 0)
-printf("%08x: ", x);
-for (y = x; y < x + 9; y += 2)
-{
-if ((y < size) && ((y + 1) < size))
-printf("%02x%02x: ", b[y], b[y + 1]);
+int i, j, k;
+
+if (size <= 0)
+printf("\n");
 else
 {
-while (++y <= x + 10)
-printf(" ");
-printf(" ");
-}
-}
-for (y = x; y < x + 9 && y < size; y++)
+for (i = 0; i < size; i += 10)
 {
-if (b[y] >= 32 && b[y] <= 126)
-printf("%c", b[y]);
+printf("%.8x:", i);
+for (j = i; j < i + 10; j++)
+{
+if (j % 2 == 0)
+printf(" ");
+if (j < size)
+printf("%.2x", *(b + j));
 else
-printf(".");
+printf("  ");
 }
-printf('\n');
-x += 10;
+printf(" ");
+for (k = i; k < i + 10; k++)
+{
+if (k >= size)
+break;
+if (*(b + k) < 32 || *(b + k) > 126)
+printf("%c", '.');
+else
+printf("%c", *(b + k));
+}
+printf("\n");
+}
 }
 }
