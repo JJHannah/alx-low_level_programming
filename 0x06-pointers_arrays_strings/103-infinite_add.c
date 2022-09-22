@@ -40,17 +40,17 @@ if (k > 0)
 else
 *(r + x) = '0';
 if (i > 0)
-i--, y = *(n1 + i)- 48;
+i--, y = *(n1 + i)-48;
 else
 y = 0;
 if (j > 0)
-j--, z = *(n2 + j)- 48;
+j--, z = *(n2 + j)-48;
 else
 z = 0;
 x--, size_r--;
 }
 if (*(r) == '0')
-return (r + 1);
+ return (r + 1);
 else
-return (r);
+  return (r);
 }
