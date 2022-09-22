@@ -12,8 +12,7 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-int i = 0, j = 0,   k,  x,  y,    z, add =0;
-int c1 = 0, c2 = 0, op, bg, dr1, dr2, add = 0;
+int i = 0, j = 0, k, x, y, z, add = 0;
 
 while (*(n1 + i) != '\0')
 i++;
@@ -28,7 +27,7 @@ if (size_r <= x + 1)
 return (0);
 r[x + 1] = '\0';
 i--, j--, size_r--;
-y = *(n1 + i) - 48, z = *(n2 + j) - 48;
+y = *(n1 + i)-48, z = *(n2 + j)-48;
 while (x >= 0)
 {
 k = y + z + add;
@@ -41,11 +40,11 @@ if (k > 0)
 else
 *(r + x) = '0';
 if (i > 0)
-i--, y = *(n1 + i) - 48;
+i--, y = *(n1 + i)- 48;
 else
 y = 0;
 if (j > 0)
-j--, z = *(n2 + j) - 48;
+j--, z = *(n2 + j)- 48;
 else
 z = 0;
 x--, size_r--;
