@@ -50,7 +50,6 @@ z = 0;
 x--, size_r--;
 }
 if (*(r) == '0')
-break;
 return (r + 1);
 else
 return (r);
