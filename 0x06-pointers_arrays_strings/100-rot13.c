@@ -9,23 +9,19 @@
 
 char *rot13(char *s)
 {
-int x = 0;
+int x;
 int y;
 
 char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-while (*(s + x) != '\0')
+for (y = 0; s[y] != '\0'; y++)
 {
-for (y = 0; y < 52; y++)
-{
-if (*(s + x) == a[y])
-{
-*(s + x) = rot13[y];
-break;
-}
-}
+x = 0;
+while (a[x] != '\0' && s[y] != a[x])
 x++;
+if (s[y] == a[x])
+s[y] = b[x];
 }
 return (s);
 }
