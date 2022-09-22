@@ -9,7 +9,6 @@
  *char prototypes()
  *
  *int prototypes()
- *
  */
 
 char *_strcat(char *dest, char *src);

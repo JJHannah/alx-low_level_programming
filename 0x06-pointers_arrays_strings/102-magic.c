@@ -8,7 +8,6 @@
  *-you are not allowed to code anything else than this line of code
  *Return: 0
  */
-
 int main(void)
 {
 int n;
