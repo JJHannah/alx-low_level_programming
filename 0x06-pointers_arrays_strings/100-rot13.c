@@ -15,13 +15,17 @@ int y;
 char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-for (y = 0; s[y] != '\0'; y++)
+for (x = 0; s[x] != '\0'; x++)
 {
-x = 0;
-while (a[x] != '\0' && s[y] != a[x])
-x++;
-if (s[y] == a[x])
-s[y] = b[x];
+for (y = 0; y < 54; y++)
+{
+if (((s[x] <= 'z' && s[x] >= 'a') || (s[x] <= 'Z' && s[x] >= 'A'))
+&& s[x] == a[y])
+{
+s[x] = b[y];
+break;
+}
+}
 }
 return (s);
 }
