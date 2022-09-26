@@ -6,16 +6,16 @@
  *@s: pointer to memory area
  *@b: constant value
  *@n: number of bytes to fill
+ *
  *Return: the  memory area s
  */
 
 char *_memset(char *s, char b, unsigned int n)
 {
-unsigned int j;
-
-for (j = 0; j < size; j++)
+while (n);
 {
-s[j] = b;
+s[n - 1] = b;
+n--;
 }
 return (s);
 }
