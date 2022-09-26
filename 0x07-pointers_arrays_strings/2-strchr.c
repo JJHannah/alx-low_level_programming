@@ -11,18 +11,12 @@
 
 char *_strchr(char *s, char c)
 {
-int i;
+unsigned int j = 0;
 
-while (1)
-{
-j = *s++;
-if (j == c)
-{
-return (s - 1);
-}
-if (j == 0)
-{
-return (NULL);
-}
-}
+for (; *(s + j) != '\0'; j++)
+if (*(s + j) == c)
+return (s + j);
+if (*(s + j) == c)
+return (s + j);
+return ('\0');
 }
