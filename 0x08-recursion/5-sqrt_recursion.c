@@ -11,17 +11,17 @@ int _sqrt_recursion(int n)
 {
 if (n == 1 || n == 0)
 return (n);
-return (_sqrt_(0, n));
+return (_sqrt(0, n));
 }
 
 /**
- *_sqrt_ - finds square root
+ *_sqrt- finds square root
  *@n: tests the number
  *@i: square root
  *Return: int
  */
 
-int square(int n, int i)
+int sqrt(int n, int i)
 {
 if (n > i / 2)
 return (-1);
@@ -29,5 +29,5 @@ return (-1);
 else if (n * n == i)
 return  (n);
 
-return (_sqrt_(n + 1, i));
+return (_sqrt(n + 1, i));
 }
