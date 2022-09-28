@@ -24,7 +24,7 @@ int square(int n, int i)
 if (n > i / 2)
 return (-1);
 
-else if (n * n < i)
+else if (n * n == i)
 return  (n);
 
 return (_sqrt_(n + 1, i));
