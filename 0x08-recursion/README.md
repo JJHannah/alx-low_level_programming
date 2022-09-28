@@ -1,4 +1,4 @@
-0. This funtion prints a string, followed by a new line.
+0. This function prints a string, followed by a new line.
 1. The following funtion prints a string in reverse.
 2. This function returns the length of a string.
 3. The following function returns the factorial of a given number.
