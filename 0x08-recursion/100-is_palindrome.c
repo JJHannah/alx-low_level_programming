@@ -30,7 +30,7 @@ if (s[start] == s[end])
 *flag *= 1;
 else
 *flag *= 0;
-checks(s, start + 1, end - 1, flag);
+check(s, start + 1, end - 1, flag);
 }
 }
 
@@ -48,4 +48,4 @@ sum++;
 sum += _strlen_recursion(s + 1);
 }
 return (sum);
-i}
+}
