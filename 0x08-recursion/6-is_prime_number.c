@@ -8,7 +8,7 @@
 
 int is_prime_number(int n)
 {
-int start = n /2;
+int start = n / 2;
 if (n <= 1)
 return (0);
 
@@ -16,9 +16,9 @@ return (is_prime(n, start));
 }
 
 /**
- *is_prime_number - check if prime
+ *is_prime - check if prime
  *@n: number to evaluate
- *@i: iterator
+ *@start: number to start checking from
  *Return: 1 if n is prime, 0 if not
  */
 
@@ -30,5 +30,5 @@ return (1);
 else if (n % start == 0)
 return (0);
 
-return(is_prime(n, start -1));
+return (is_prime(n, start - 1));
 }
