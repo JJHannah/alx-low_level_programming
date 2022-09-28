@@ -20,7 +20,7 @@ return (_sqrt(0, n));
  *Return: int
  */
 
-int sqrt(int n, int i)
+int _sqrt(int n, int i)
 {
 if (n > i / 2)
 return (-1);
