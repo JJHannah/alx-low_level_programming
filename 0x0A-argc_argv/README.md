@@ -1,1 +1,6 @@
-README
+0. This  program that prints its name, followed by a new line,If you rename the program, it will print the new name.Moreover, without having to compile it again also You should not remove the path before the name of the program.
+1. This program prints the number of arguments passed into it.
+2. This program prints all arguments it receives,All arguments should be printed, including the first one.
+3. The following program multiplies two numbers,the program should print the result of the multiplication, followed by a new line.If the program does not receive two arguments, your program should print Error, followed by a new line, and return 1.
+4. This program adds positive numbers,Print the result If no number is passed to the program, print 0.If one of the number contains symbols that are not digits, print Error.
+5. This program prints the minimum number of coins to make change for an amount of money.The Usage: ./change cents,where cents is the amount of cents you need to give back.if the number of arguments passed to your program is not exactly 1, print Error, followed by a new line, and return 1.You should use atoi to parse the parameter passed to your program.If the number passed as the argument is negative, print 0,You can use an unlimited number of coins of values 25, 10, 5, 2, and 1 cent.
