@@ -37,5 +37,5 @@ else
 {
 return (NULL);
 }
-return (new_string)
+return (new_string);
 }
