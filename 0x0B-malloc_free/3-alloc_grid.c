@@ -18,11 +18,10 @@ if (width <= 0 || height <= 0)
 return (NULL);
 
 grid = malloc(height * sizeof(int *));
-
 if (grid == NULL)
 return (NULL);
 
-for (x = 0; x < height; x++) 
+for (x = 0; x < height; x++)
 {
 grid[x] = malloc(width * sizeof(int));
 if (grid[x] == NULL)
