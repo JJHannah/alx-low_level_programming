@@ -34,11 +34,11 @@ for (i = 0; i < ac; i++)
 {
 for (x = 0; av[i][x] != '\0'; x++)
 {
-str[y] = av[i][x];
-y++;
+str[x] = av[i][y];
+x++;
 }
-str[y] = '\n';
-y++;
+str[x] = '\n';
+x++;
 }
 return (str);
 }
