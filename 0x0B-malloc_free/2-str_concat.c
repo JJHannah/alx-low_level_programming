@@ -25,7 +25,7 @@ len2++,
 y++;
 len2++;
 
-concat = malloc(sizeof(char) * (len1 + len2))
+concat = malloc(sizeof(char) * (len1 + len2));
 
 if (concat == NULL)
 return (NULL);
