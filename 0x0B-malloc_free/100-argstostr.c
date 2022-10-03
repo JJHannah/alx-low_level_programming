@@ -18,7 +18,7 @@ if (ac == 0 || av == NULL)
 return (NULL);
 
 while (ac--)
-sum += (len(av[ac]) + 1);
+sum += (len(av[ac]) + 1));
 new_string = (char *) malloc(sum + 1);
 
 if (new_string != NULL)
