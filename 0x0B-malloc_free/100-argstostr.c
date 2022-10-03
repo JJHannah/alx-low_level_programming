@@ -3,6 +3,22 @@
 #include <stdlib.h>
 
 /**
+ *  _strlen - returns the length of a string
+ *  @s: string
+ *  Return: length
+ */
+
+int _strlen(char *s)
+{
+int len = 0;
+while (*s != '\0')
+len++,
+s++;
+
+return (len);
+}
+
+/**
  * *argstostr - concatenates all the arguments of the program
  * @ac: number of arguments
  * @av: array of arguments
@@ -11,31 +27,32 @@
 
 char *argstostr(int ac, char **av)
 {
-char *new_string = NULL;
-int i = 0, j = ac, k, sum = 0, temp = 0;
+char *s;
 
+int len = 0, i, x, y = 0;
 if (ac == 0 || av == NULL)
 return (NULL);
 
-while (ac--)
-sum += (len(av[ac]) + 1));
-new_string = (char *) malloc(sum + 1);
+for (i = 0; i < ac; i++)
+{
+len += _strlen(av[i]);
+}
+len += (ac + 1)
 
-if (new_string != NULL)
+s = malloc(len * sizeof(char));
+
+if (s == NULL)
 {
-while (i < j)
-{
-for (k = 0; av[i][k] != '\0'; k++)
-new_string[k + temp] = av[i][k];
-new_string[temp + k] = '\n';
-temp += (k + 1);
-i++;
-}
-new_string[temp] = '\0';
-}
-else
-{
+free(s);
 return (NULL);
 }
-return (new_string);
+for (i = 0; i < ac; i++)
+{
+for (x = 0; x < _strlen(av[i]); x++)
+{
+s[y++] = av[i][x];
+}
+s[y++] = '\n';
+}
+return (s);
 }
