@@ -63,7 +63,7 @@ return (NULL);
 while (start < end)
 *tmp++ = str[start++];
 *tmp = '\0';
-split[k] = tmp - c;
+split[y] = tmp - c;
 y++;
 c = 0;
 }
