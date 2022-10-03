@@ -39,7 +39,7 @@ len += _strlen(av[i]);
 }
 len += (ac + 1);
 
-s = malloc(len * sizeof(char));
+s = malloc(len *sizeof(char));
 
 if (s == NULL)
 {
