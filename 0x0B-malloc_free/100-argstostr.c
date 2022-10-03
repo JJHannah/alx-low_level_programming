@@ -37,7 +37,7 @@ for (i = 0; i < ac; i++)
 {
 len += _strlen(av[i]);
 }
-len += (ac + 1)
+len += (ac + 1);
 
 s = malloc(len * sizeof(char));
 
