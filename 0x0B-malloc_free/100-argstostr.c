@@ -11,34 +11,31 @@
 
 char *argstostr(int ac, char **av)
 {
-int i, x, y, len;
-char *str;
+char *new_string = NULL;
+int i = 0, j = ac, k, sum = 0, temp = 0;
 
 if (ac == 0 || av == NULL)
 return (NULL);
 
-for (i = 0; i < ac; i++)
-{
-for (x = 0; av[i][x] != '\0'; x++)
-len++;
-len++;
-}
-str = malloc(sizeof(char) * (len + 1));
+while (ac--)
+sum += (len(av[ac]) + 1);
+new_string = (char *) malloc(sum + 1);
 
-if (str == NULL)
+if (new_string != NULL)
+{
+while (i < j)
+{
+for (k = 0; av[i][k] != '\0'; k++)
+new_string[k + temp] = av[i][k];
+new_string[temp + k] = '\n';
+temp += (k + 1);
+i++;
+}
+new_string[temp] = '\0';
+}
+else
+{
 return (NULL);
-
-y = 0;
-
-for (i = 0; i < ac; i++)
-{
-for (x = 0; av[i][x] != '\0'; x++)
-{
-str[y] = av[i]x];
-y++;
 }
-str[y] = '\n';
-y++;
-}
-return (str);
+return (new_string)
 }
