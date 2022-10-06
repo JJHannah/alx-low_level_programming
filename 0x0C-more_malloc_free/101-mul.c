@@ -1,47 +1,90 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 /**
- * _realloc - allocate memory and set all values to 0
- * @ptr: pointer to the memory previously allocated (malloc(old_size))
- * @old_size: size previously allocated
- * @new_size: new size to reallocate
- * Return: pointer to reallocated memory
+ * is_digit - checks if a string contains a non-digit char
+ * @s: string to be evaluated
+ * Return: 0 if a non-digit is found, 1 otherwise
  */
 
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
+int is_digit(char *s)
 {
-char *p;
-char *old_ptr;
-unsigned int x;
+int x = 0;
 
-if (new_size == old_size)
-return (ptr);
+while (s[x])
+{
+if (s[x] < '0' || s[x] > '9')
+return (0);
+x++;
+}
+return (1);
+}
 
-if (new_size == 0 && ptr)
-{
-free(ptr);
-return (NULL);
-}
-if (!ptr)
-return (malloc(new_size));
-p = malloc(new_size);
-if (!p)
-return (NULL);
+/**
+ * _strlen - returns the length of a string
+ * @s: string to evaluate
+ * Return: the length of the string
+ */
 
-old_ptr = ptr;
-if (new_size < old_size)
+int _strlen(char *s)
 {
-for (x = 0; x < new_size; x++)
-p[x] = old_ptr[x];
-}
-if (new_size > old_size)
+int x = 0;
+while (s[x] != '\0')
 {
-for (x = 0; x < old_size; x++)
-p[x] = old_ptr[x];
+x++;
 }
-free(ptr);
-return (p);
-i}
+return (x);
+}
+
+/**
+ * errors - handles errors for main
+ */
+
+void errors(void)
+{
+printf("Error\n");
+exit(98);
+}
+
+/**
+ * main - multiplies two positive numbers
+ * @argc: number of arguments
+ * @argv: array of arguments
+ * Return: always 0 (Success)
+ */
+int main(int argc, char *argv[])
+{
+char *s1, *s2;
+int len1, len2, len, x, carry, digit1, digit2, *result, a = 0;
+
+s1 = argv[1], s2 = argv[2];
+if (argc != 3 || !is_digit(s1) || !is_digit(s2))
+errors();
+len1 = _strlen(s1);
+len2 = _strlen(s2);
+len = len1 + len2 + 1;
+result = malloc(sizeof(int) * len);
+if (!result)
+return (1);
+for (x = 0; x <= len1 + len2; x++)
+result[x] = 0;
+for (len1 = len1 - 1; len1 >= 0; len1--)
+{
+digit1 = s1[len1] - '0';
+carry = 0;
+for (len2 = _strlen(s2) - 1; len2 >= 0; len2--)
+{
+digit2 = s2[len2] - '0';
+carry += result[len1 + len2 + 1] + (digit1 * digit2);
+result[len1 + len2 + 1] = carry % 10;
+carry /= 10;
+}
+if (carry > 0)
+result[len1 + len2 + 1] += carry;
+}
+_putchar('\n');
+free(result);
+return (0);
+}
+}
+}
