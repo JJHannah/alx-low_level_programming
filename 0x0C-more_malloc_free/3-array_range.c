@@ -19,7 +19,8 @@ return (NULL);
 size = max - min + 1;
 
 p = malloc(sizeof(int) * size);
-if(p == NULL)
+
+if (p == NULL)
 return (NULL);
 
 for (x = 0; min < max; x++)
