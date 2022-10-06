@@ -23,7 +23,7 @@ p = malloc(sizeof(int) * size);
 if (p == NULL)
 return (NULL);
 
-for (x = 0; min < max; x++)
+for (x = 0; min <= max; x++)
 p[x] = min++;
 
 return (p);
