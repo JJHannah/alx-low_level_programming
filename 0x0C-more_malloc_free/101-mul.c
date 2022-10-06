@@ -39,7 +39,7 @@ p[x] = old_ptr[x];
 }
 if (new_size > old_size)
 {
-for (x = 0; x < old_size; x++) 
+for (x = 0; x < old_size; x++)
 p[x] = old_ptr[x];
 }
 free(ptr);
