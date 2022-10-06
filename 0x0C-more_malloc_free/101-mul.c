@@ -44,4 +44,4 @@ p[x] = old_ptr[x];
 }
 free(ptr);
 return (p);
-}
+i}
