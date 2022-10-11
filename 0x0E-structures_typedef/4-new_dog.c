@@ -4,7 +4,6 @@
 /**
  * _strlen -Finds the length of a string
  * @str: The string to be measured
- * 
  * Return: The length of the string
  */
 
@@ -37,10 +36,10 @@ return (dest);
  * new_dog -creates a new dog
  * @name: The name of the dog
  * @owner: The owner of the dog
- * @age: age of the dog 
- * 
+ * @age: age of the dog
  * Return: The new struct dog 
  */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
 dog_t *dog;
