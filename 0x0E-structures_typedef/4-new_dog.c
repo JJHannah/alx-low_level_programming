@@ -37,9 +37,8 @@ return (dest);
  * @name: The name of the dog
  * @owner: The owner of the dog
  * @age: age of the dog
- * Return: The new struct dog 
+ * Return: The new struct dog
  */
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
 dog_t *dog;
