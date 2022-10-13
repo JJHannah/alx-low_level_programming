@@ -51,6 +51,7 @@ return (a / b);
  * op_mod - calculates the remainder of the division of two integers
  * @a: first integer
  * @b: second integer
+ * Return: remainder of a divided b
  */
 
 int op_mod(int a, int b)
