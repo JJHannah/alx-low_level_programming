@@ -8,43 +8,41 @@
 
 void print_all(const char * const format, ...)
 {
-va_list valist;
-unsigned int x = 0, y, z = 0;
-char *str;
-const char t_arg[] = "cifs";
+int x = 0;
+char *str, *sep = "";
 
-va_start(valist, format);
-while (format && format[x])
+va_list list;
+va_start(list, format);
+
+if (format)
 {
-y = 0;
-while (t_arg[y])
+while (format[x])
 {
-if (format[x] == t_arg[y] && c)
-{
-printf(", ");
-break;
-} y++;
-}
 switch (format[x])
 {
 case 'c':
-printf("%c", va_arg(valist, int)), c = 1;
+printf("%s%c", sep, va_arg(list, int));
 break;
-case 'x':
-printf("%d", va_arg(valist, int)), c = 1;
+case 'i':
+printf("%s%d", sep, va_arg(list, int));
 break;
 case 'f':
-printf("%f", va_arg(valist, double)), c = 1;
+printf("%s%f", sep, va_arg(list, double));
 break;
 case 's':
-str = va_arg(valist, char *), c = 1;
+str = va_arg(list, char *);
 if (!str)
-{
-printf("(nil)");
+str = "(nil)";
+printf("%s%s", sep, str);
 break;
+default:
+x++;
+continue;
 }
-printf("%s", str);
-} x++;
+sep = ", ";
+x++;
 }
-printf("\n"), va_end(valist);
+}
+printf("\n");
+va_end(list);
 }
