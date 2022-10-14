@@ -25,7 +25,7 @@ if (format[x] == t_arg[y] && c)
 {
 printf(", ");
 break;
-}y++;
+} y++;
 }
 switch (format[x])
 {
