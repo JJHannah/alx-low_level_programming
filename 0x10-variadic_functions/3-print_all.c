@@ -32,7 +32,7 @@ switch (format[x])
 case 'c':
 printf("%c", va_arg(valist, int)), c = 1;
 break;
-case 'i':
+case 'x':
 printf("%d", va_arg(valist, int)), c = 1;
 break;
 case 'f':
