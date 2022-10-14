@@ -46,7 +46,7 @@ printf("(nil)");
 break;
 }
 printf("%s", str);
-}x++;
+} x++;
 }
 printf("\n"), va_end(valist);
 }
