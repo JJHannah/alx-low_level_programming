@@ -26,7 +26,7 @@ return (1);
 while (x < (index - 1) && tmp != NULL)
 {
 tmp = tmp->next;
-i++;
+x++;
 }
 if (x != (index - 1) || tmp->next == NULL)
 return (-1);
