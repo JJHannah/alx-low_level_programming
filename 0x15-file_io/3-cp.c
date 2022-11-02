@@ -51,7 +51,6 @@ if (x < 0)
 dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_r);
 if (y < 0)
 dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_w);
-
 exit(100);
 }
 return (0);
